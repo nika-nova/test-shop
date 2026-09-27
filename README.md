@@ -4,7 +4,7 @@
 
 ## Демо
 
-🖥 [Посмотреть сайт](https://nika-nova.github.io/test-shop/)
+🖥 [Посмотреть сайт](https://nika-nova.github.io/test-shop/#/)
 
 ## Запуск
 
