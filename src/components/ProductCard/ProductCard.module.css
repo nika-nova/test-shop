@@ -1,0 +1,169 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 407px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card:active {
+  box-shadow: 0px 0px 10px var(--color-muted);
+}
+
+.imageWrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-text);
+  margin: 0;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  min-height: 41px;
+}
+
+.price {
+  font-weight: 600; /* Чуть менее жирный */
+  font-size: 17px;
+  line-height: 21px;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.discountPrice {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-accent-light);
+  text-decoration-line: line-through;
+  margin-top: 4px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-muted);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.star {
+  color: #FBBF24;
+  display: inline-block;
+}
+
+.buyLink {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.buyLink:hover {
+  color: var(--color-accent);
+}
+
+/* --- АДАПТИВ: мобильные --- */
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 18px;
+  }
+
+  .imageWrapper {
+    flex: none;
+    height: 180px;
+  }
+
+  .image {
+    max-height: 180px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .rating {
+    font-size: 15px;
+  }
+
+  .buyLink {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    padding: 14px;
+  }
+
+  .imageWrapper {
+    height: 160px;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}

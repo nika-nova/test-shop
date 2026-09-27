@@ -1,0 +1,183 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* Не шире 600 на больших экранах */
+  margin: 0 0 16px 0; /* Отступ снизу между карточками */
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  position: relative; /* Нужно для кнопки удаления */
+}
+
+/* Строка: картинка слева, инфо справа */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.imageWrap {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--color-light-bg);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.price {
+  font-size: 14px;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+/* Контролы и сумма */
+.controlsBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qtyBtn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--color-accent-light);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qtyBtn:hover {
+  background-color: #e5b76b;
+}
+
+.qtyValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sum {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Кнопка удаления */
+.removeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.removeBtn:hover {
+  opacity: 1;
+}
+
+.icon {
+  width: 20px;
+  height: 17px;
+  fill: currentColor;
+}
+
+/* --- АДАПТИВ ДЛЯ МОБИЛЬНЫХ --- */
+@media (max-width: 600px) {
+  .item {
+    align-items: stretch;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .imageWrap,
+  .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-height: 240px;
+    margin-bottom: 16px;
+  }
+
+  /* На мобильном: кнопка удаления — обычный блок, прижатый вправо */
+  .removeBtn {
+    position: static;
+    top: auto;
+    right: auto;
+    margin: 8px 0;          /* Отступы сверху/снизу */
+    opacity: 1;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Прижимаем содержимое кнопки вправо */
+    width: 100%;            /* Чтобы flex работал на всю ширину */
+  }
+
+  .controlsBottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .quantity {
+    justify-content: center;
+  }
+
+  .sum {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,157 @@
+.cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* товары 2fr, итог 1fr */
+  gap: 24px;
+  max-width: 1110px;
+  min-height: 215px;
+  margin: 0 auto;
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+
+
+/* Левая колонка */
+.itemsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-text);
+  margin: 0 0 24px 0; /* чуть больше отступ снизу, чтобы смотрелось аккуратно */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 0;      /* <-- обязательно */
+  list-style: none;/* <-- обязательно */
+}
+
+/* Правая колонка */
+
+.summaryColumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.summary {
+  border-radius: var(--radius);
+  background: #fff;
+  margin-top: 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Чтобы блок не становился слишком узким на средних экранах */
+  min-width: 320px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0;
+}
+
+.summaryLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.summaryTotal {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.checkoutBtn {
+  padding: 20px 14px;
+  background: #000;           /* чёрная */
+  color: #fff;               /* белая подпись */
+  border: none;
+  border-radius: 15px;         /* скругление 25% — как в ТЗ */
+  font-size: 17px;            /* шрифт 17px */
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;                 /* по ширине блока «Итого» */
+}
+
+.checkoutBtn:hover {
+  background: var(--color-accent-light);
+  color: var(--color-text);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.emptyText {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.backLink {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color var(--transition);
+}
+
+.backLink:hover {
+  color: var(--color-accent);
+}
+
+/* Адаптив: на планшетах и мобильных возвращаем в 1 колонку */
+@media (max-width: 768px) {
+  .cart {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .summaryColumn {
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
+
+  .summary {
+    min-width: 0;
+    margin-top: 0;
+  }
+}
