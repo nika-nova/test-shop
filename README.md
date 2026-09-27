@@ -2,6 +2,10 @@
 
 Тестовое задание: интернет-магазин аудиоаксессуаров на React + Vite + TypeScript.
 
+## Демо
+
+🖥 [Посмотреть сайт](https://nika-nova.github.io/test-shop/)
+
 ## Запуск
 
 ```bash
