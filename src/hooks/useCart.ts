@@ -49,8 +49,8 @@ export function useCart() {
       return [
         ...prev,
         {
-          ...product,           // все поля из IProduct
-          price: roundedPrice,  // подменяем на итоговую цену
+          ...product,
+          price: roundedPrice,
           quantity: 1,
         },
       ];

@@ -12,11 +12,11 @@
 }
 
 .modal {
-  background: #ffffff;
+  background: var(--color-white);
   padding: 24px;
-  border-radius: 12px; /* как в инлайн-стилях */
+  border-radius: 12px;
   text-align: center;
-  min-width: 280px;    /* как в инлайн-стилях */
+  min-width: 280px;
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -32,7 +32,7 @@
   cursor: pointer;
   color: #333;
   padding: 0;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .closeBtn:hover {

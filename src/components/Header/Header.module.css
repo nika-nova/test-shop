@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* важно: пусть он сам займёт всю ширину контейнера */
+  width: 100%;
 }
 
 .logo {
@@ -16,7 +16,7 @@
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .logo:hover {
@@ -26,10 +26,9 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 45px; /* на мобильных можно будет чуть уменьшить, если тесно */
+  gap: 45px;
 }
 
-/* Кнопка-иконка */
 .iconBtn {
   position: relative;
   background: none;
@@ -40,20 +39,18 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #333;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  color: var(--color-muted);
+  transition: opacity var(--transition), color var(--transition);
 }
 
-/* SVG внутри кнопки */
 .icon {
   display: block;
   fill: currentColor;
-  transition: fill 0.2s ease;
+  transition: fill var(--transition);
   width: 100%;
   height: 100%;
 }
 
-/* Единый размер иконок на всех экранах */
 .likeIcon,
 .cartIcon {
   width: 24px;
@@ -67,13 +64,12 @@
   color: var(--color-accent);
 }
 
-/* Бейдж корзины */
 .cartBadge {
   position: absolute;
   top: -8px;
   right: -8px;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-white);
   font-size: 12px;
   font-weight: 600;
   min-width: 18px;
@@ -85,20 +81,18 @@
   padding: 0 4px;
 }
 
-/* Планшеты: убираем уменьшение иконок, оставляем только уменьшение gap, если нужно */
 @media (max-width: 1024px) {
   .header .actions {
-    gap: 36px; /* чуть уменьшаем расстояние между иконками, чтобы не было тесно */
+    gap: 36px;
   }
 }
 
-/* Мобильные: увеличиваем боковые отступы, gap чуть уменьшаем для компактности */
 @media (max-width: 768px) {
   .header .actions {
-    gap: 24px; /* чтобы иконки не слипались, но и не занимали полэкрана */
+    gap: 24px;
   }
 
   .container {
-    padding: 0 20px; /* синхронный отступ с каталогом */
+    padding: 0 20px;
   }
 }

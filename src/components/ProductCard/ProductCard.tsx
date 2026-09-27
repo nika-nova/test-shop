@@ -6,7 +6,7 @@ import styles from './ProductCard.module.css';
 interface ProductCardProps {
   product: IProduct;
   onBuy: (product: IProduct) => void;
-  onCardClick?: () => void; // <-- новый пропс
+  onCardClick?: () => void;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
@@ -24,7 +24,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <article
       className={styles.card}
-      onClick={onCardClick} // <-- клик по карточке открывает модалку
+      onClick={onCardClick}
     >
       <div className={styles.imageWrapper}>
         <img
@@ -57,7 +57,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <span
             className={styles.buyLink}
             onClick={(e) => {
-              e.stopPropagation(); // <-- чтобы клик не уходил на карточку
+              e.stopPropagation();
               onBuy(product);
             }}
             role="button"

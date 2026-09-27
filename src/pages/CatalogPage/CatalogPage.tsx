@@ -22,7 +22,6 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
 
     return (
         <main className={styles.page}>
-            {/* Секция: Наушники */}
             {headphones.length > 0 && (
                 <section className={styles.categorySection}>
                     <div className="container">
@@ -41,7 +40,6 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
                 </section>
             )}
 
-            {/* Секция: Беспроводные наушники */}
             {wirelessHeadphones.length > 0 && (
                 <section className={styles.categorySection}>
                     <div className="container">

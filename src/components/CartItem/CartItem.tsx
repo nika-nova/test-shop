@@ -14,7 +14,6 @@ export default function CartItem({ item }: Props) {
 
   return (
     <li className={styles.item}>
-      {/* Кнопка удаления — абсолют, сверху справа */}
       <button
         className={styles.removeBtn}
         onClick={() => removeFromCart(item.id)}
@@ -28,21 +27,17 @@ export default function CartItem({ item }: Props) {
         </svg>
       </button>
 
-      {/* Строка: картинка + инфо справа */}
       <div className={styles.row}>
-        {/* Картинка */}
         <div className={styles.imageWrap}>
           <img src={item.image} alt={item.title} className={styles.image} />
         </div>
 
-        {/* Название и цена — справа от картинки */}
         <div className={styles.info}>
           <h3 className={styles.title}>{item.title}</h3>
           <span className={styles.price}>{formatPrice(item.price, { useSpaces: true })}</span>
         </div>
       </div>
 
-      {/* Контролы: количество, кнопки, сумма позиции */}
       <div className={styles.controlsBottom}>
         <div className={styles.quantity}>
           <button
@@ -65,7 +60,6 @@ export default function CartItem({ item }: Props) {
           </button>
         </div>
 
-        {/* Сумма позиции (справа внизу) */}
         <span className={styles.sum}>{formatPrice(lineTotal, { useSpaces: true })}</span>
       </div>
     </li>

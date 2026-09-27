@@ -5,7 +5,7 @@
   height: 407px;
   padding: 22px;
   border-radius: var(--radius);
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   transition: transform 0.25s ease, box-shadow 0.1s ease-in-out;
@@ -75,7 +75,7 @@
 }
 
 .price {
-  font-weight: 600; /* Чуть менее жирный */
+  font-weight: 600;
   font-size: 17px;
   line-height: 21px;
   color: var(--color-accent);
@@ -102,7 +102,7 @@
 }
 
 .star {
-  color: #FBBF24;
+  color: var(--color-accent-light);
   display: inline-block;
 }
 
@@ -111,17 +111,16 @@
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  color: #000000;
+  color: var(--color-button-icon);
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .buyLink:hover {
   color: var(--color-accent);
 }
 
-/* --- АДАПТИВ: мобильные --- */
 @media (max-width: 500px) {
   .card {
     width: 100%;

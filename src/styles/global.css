@@ -1,14 +1,13 @@
 :root {
   --color-bg: #EAEAEA;
   --color-text: #1C1C27;
-  --color-accent: #FFA542;       /* основной оранжевый */
-  --color-accent-light: #FFCE7F; /* чуть светлее — для кнопок/акцентов */
+  --color-accent: #FFA542;
+  --color-accent-light: #FFCE7F;
   --color-muted: #838383;
-  --color-border: #e0e0e0;
+  --color-button-icon: #101010;
+  --color-white: #fff;
 
-  --radius: 30px;                 /* единый радиус скругления */
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --radius: 30px;
 
   --transition: 0.2s ease;
 

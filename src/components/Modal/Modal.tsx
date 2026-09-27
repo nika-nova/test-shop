@@ -1,4 +1,4 @@
-import styles from './Modal.module.css'; // подключаем модуль
+import styles from './Modal.module.css';
 
 const Modal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   if (!isOpen) return null;

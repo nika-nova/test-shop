@@ -14,9 +14,7 @@ const Footer = () => {
           <div className={styles.flexRow}>
             <Link to="/" className={styles.logo}>QPICK</Link>
 
-        {/* Два столбца ссылок */}
         <div className={styles.columns}>
-          {/* Столбец 1 */}
           <div className={styles.column}>
             <button
               type="button"
@@ -37,7 +35,6 @@ const Footer = () => {
             </button>
           </div>
 
-          {/* Столбец 2 */}
           <div className={styles.column}>
             <button
               type="button"
@@ -47,7 +44,6 @@ const Footer = () => {
               Условия сервиса
             </button>
 
-            {/* Блок языка */}
             <div className={styles.langBlock}>
               <svg className={`${styles.icon} ${styles.langIcon}`}>
                 <use href="#lang" />
@@ -78,7 +74,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Соцсети справа */}
         <div className={styles.social}>
           <a
             href="https://vk.com"

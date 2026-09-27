@@ -1,16 +1,14 @@
 .cart {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* товары 2fr, итог 1fr */
+  grid-template-columns: 2fr 1fr;
   gap: 24px;
-  max-width: 1110px;
+  max-width: var(--container-max-width);
   min-height: 215px;
   margin: 0 auto;
   padding: 24px 0;
   box-sizing: border-box;
 }
 
-
-/* Левая колонка */
 .itemsColumn {
   display: flex;
   flex-direction: column;
@@ -27,7 +25,7 @@
   font-size: 20px;
   line-height: 24px;
   color: var(--color-text);
-  margin: 0 0 24px 0; /* чуть больше отступ снизу, чтобы смотрелось аккуратно */
+  margin: 0 0 24px 0;
 }
 
 .list {
@@ -36,11 +34,9 @@
   justify-self: flex-start;
   gap: 16px;
   width: 100%;
-  padding: 0;      /* <-- обязательно */
-  list-style: none;/* <-- обязательно */
+  padding: 0;
+  list-style: none;
 }
-
-/* Правая колонка */
 
 .summaryColumn {
   display: flex;
@@ -50,15 +46,13 @@
 
 .summary {
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--color-white);
   margin-top: 47px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
   box-sizing: border-box;
-
-  /* Чтобы блок не становился слишком узким на средних экранах */
   min-width: 320px;
 }
 
@@ -90,15 +84,15 @@
 
 .checkoutBtn {
   padding: 20px 14px;
-  background: #000;           /* чёрная */
-  color: #fff;               /* белая подпись */
+  background: var(--color-button-icon);
+  color: var(--color-white);
   border: none;
-  border-radius: 15px;         /* скругление 25% — как в ТЗ */
-  font-size: 17px;            /* шрифт 17px */
+  border-radius: 15px;
+  font-size: 17px;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
-  width: 100%;                 /* по ширине блока «Итого» */
+  width: 100%;
 }
 
 .checkoutBtn:hover {
@@ -137,7 +131,6 @@
   color: var(--color-accent);
 }
 
-/* Адаптив: на планшетах и мобильных возвращаем в 1 колонку */
 @media (max-width: 768px) {
   .cart {
     grid-template-columns: 1fr;

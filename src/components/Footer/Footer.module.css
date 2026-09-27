@@ -2,11 +2,10 @@
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
-  background-color: #ffffff;
-  padding: 29px;               /* внутренние отступы */
+  background-color: var(--color-white);
+  padding: 29px;
   box-sizing: border-box;
 
-  /* Скругление только сверху (как у тебя) */
   border-radius: var(--radius) var(--radius) 0px 0px;
   overflow: hidden;
 }
@@ -21,7 +20,7 @@
 
 .columns {
   display: flex;
-  gap: 174px;                  /* если на больших экранах это ок, оставь */
+  gap: 174px;
 }
 
 .column {
@@ -33,7 +32,7 @@
 .logo {
   font-weight: 700;
   font-size: 20px;
-  color: #101010;
+  color: var(--color-button-icon);
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -42,14 +41,14 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #101010;
+  color: var(--color-button-icon);
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   text-align: left;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .link:hover {
@@ -59,7 +58,7 @@
 .icon {
   display: block;
   fill: currentColor;
-  transition: fill 0.2s ease;
+  transition: fill var(--transition);
   width: 100%;
   height: 100%;
 }
@@ -73,13 +72,13 @@
 .socialIcon {
   width: 30.1px;
   height: 30.1px;
-  color: #101010;
+  color: var(--color-button-icon);
 }
 
 .vkIcon {
   fill: currentColor;
   stroke: none;
-  color: #101010;
+  color: var(--color-button-icon);
 }
 
 .langBlock {
@@ -106,8 +105,8 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  color: #010101;
-  transition: color 0.2s ease;
+  color: var(--color-button-icon);
+  transition: color var(--transition);
 }
 
 .langBtn:hover {
@@ -133,14 +132,13 @@
 .socialLink {
   display: inline-flex;
   align-items: center;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition);
 }
 
 .socialLink:hover {
   opacity: 0.4;
 }
 
-/* --- Адаптив --- */
 @media (max-width: 768px) {
   .flexRow {
     flex-direction: column;

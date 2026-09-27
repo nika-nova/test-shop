@@ -2,17 +2,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px; /* Не шире 600 на больших экранах */
-  margin: 0 0 16px 0; /* Отступ снизу между карточками */
-  background: #fff;
+  max-width: 600px;
+  margin: 0 0 16px 0;
+  background: var(--color-white);
   border-radius: var(--radius);
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
-  position: relative; /* Нужно для кнопки удаления */
+  position: relative;
 }
 
-/* Строка: картинка слева, инфо справа */
 .row {
   display: flex;
   align-items: center;
@@ -22,8 +21,8 @@
 
 .imageWrap {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   background: var(--color-light-bg);
   border-radius: var(--radius);
   display: flex;
@@ -59,7 +58,6 @@
   font-weight: 400;
 }
 
-/* Контролы и сумма */
 .controlsBottom {
   display: flex;
   align-items: center;
@@ -78,20 +76,20 @@
   height: 30px;
   border: none;
   background-color: var(--color-accent-light);
-  color: #fff;
+  color: var(--color-white);
   border-radius: 50%;
   font-size: 18px;
   line-height: 28px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition);
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
 .qtyBtn:hover {
-  background-color: #e5b76b;
+  background-color: var(--color-accent);
 }
 
 .qtyValue {
@@ -106,7 +104,6 @@
   color: var(--color-text);
 }
 
-/* Кнопка удаления */
 .removeBtn {
   position: absolute;
   top: 12px;
@@ -128,7 +125,6 @@
   fill: currentColor;
 }
 
-/* --- АДАПТИВ ДЛЯ МОБИЛЬНЫХ --- */
 @media (max-width: 600px) {
   .item {
     align-items: stretch;
@@ -148,17 +144,16 @@
     margin-bottom: 16px;
   }
 
-  /* На мобильном: кнопка удаления — обычный блок, прижатый вправо */
   .removeBtn {
     position: static;
     top: auto;
     right: auto;
-    margin: 8px 0;          /* Отступы сверху/снизу */
+    margin: 8px 0;
     opacity: 1;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Прижимаем содержимое кнопки вправо */
-    width: 100%;            /* Чтобы flex работал на всю ширину */
+    justify-content: flex-end;
+    width: 100%;
   }
 
   .controlsBottom {
@@ -176,7 +171,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .item {
     max-width: 100%;
   }
