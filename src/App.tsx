@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { CartContext } from './context/CartContext';
 import { useCart } from './hooks/useCart';
 import Header from './components/Header/Header';
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <CartContext.Provider value={cart}>
-      <BrowserRouter>
+      <HashRouter>
         <div className={styles.app}>
           <Sprites />
           <Header />
@@ -39,7 +39,7 @@ function App() {
           </main>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </CartContext.Provider>
   );
 }
